@@ -22,7 +22,7 @@ public:
   void virtual action() {
     // Do your stuff.
     Serial.print(state);
-    Serial.println(" custom button 2");
+    Serial.println(" custom button 1");
   }
 };
 
