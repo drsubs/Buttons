@@ -1,8 +1,8 @@
 ## Buttons
 
-This library is an adapation of the SoftwareSerial library, with the receiving code omitted.
-
-It is intended for situations where you need to do software sending (not use the hardware serial) but don't need to receive anything. This lets you avoid tying up the pin-change interrupts for the receiving code.
+This library is to poll input pins for changes, buttons pushed. It also gives a tutorial on class'es, on virtual and static methodes.
+You create an object that inherrits the virtual class Button and re-define the action method. That catches the pin change(push) and you 
+fill in the code to handle the button push. On static methodes look in example project, the class OneBtn shows how a static method is used.
 
 Example of use:
 
