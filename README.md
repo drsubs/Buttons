@@ -40,16 +40,18 @@ void loop() {
 }
 ```
 
----
 
 ## How to install
 
 Download .zip file from this repository, choose sketch, in "include library" choose add .zip library, choose the .zip just downloaded.
-or
+## or
 Move to arduino/libraries
 open terminal in directory and write
-
+```
 git clone https://github.com/drsubs/Buttons.git
+```
+
+
 restart arduino ide
 
 done
