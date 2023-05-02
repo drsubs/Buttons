@@ -1,7 +1,11 @@
 #include "buttons.h"
+#include "arduino.h"
+#ifdef __AVR_ATtinyX4__
 #include <SendOnlySoftwareSerial.h>
-
 SendOnlySoftwareSerial mySerial(PA1);
+#define Serial mySerial
+#endif
+
 /*
  *  Buttons example code.
  *  I define 4 diferrent ways of useing the Buttons object.
@@ -24,12 +28,12 @@ public:
   void virtual action() {
     if(!state) {
       downtime=millis();
-      mySerial.println("Button 1 down");
+      Serial.println("Button 1 down");
     }
     if(state) {
       unsigned long hold=millis()-downtime;
-      mySerial.print("Button 1 hold time:");
-      mySerial.println(hold);
+      Serial.print("Button 1 hold time:");
+      Serial.println(hold);
     }
   }
   unsigned long downtime;
@@ -44,8 +48,8 @@ public:
   CustomButton() : Button(BTN2) {}
   void virtual action() {
     // Do your stuff.
-    mySerial.print(state);
-    mySerial.println(" custom button 2");
+    Serial.print(state);
+    Serial.println(" custom button 2");
   }
 };
 /*
@@ -60,11 +64,11 @@ public:
     if(state) actionUp(); else actionDown();
   }
   void actionDown() {
-    mySerial.println("Button 3 Down");
+    Serial.println("Button 3 Down");
 
   }
   void actionUp() {
-    mySerial.println("Button 3 Up");
+    Serial.println("Button 3 Up");
   }
 };
 /*
@@ -89,12 +93,12 @@ public:
     switch(id) {
       // Add one case for each id.
       case 4:
-        mySerial.print("OneBtn ");
-        mySerial.print(state);
-        mySerial.println(id);
+        Serial.print("OneBtn ");
+        Serial.print(state);
+        Serial.println(id);
         break;
       default : // unknown button. You forgot to write a case.
-        mySerial.println("Unknown button.");
+        Serial.println("Unknown button.");
       break;
     }
   }
@@ -107,7 +111,7 @@ Buttons buttons;
 
 void setup() {
   // Begin serial
-  mySerial.begin(9600);
+  Serial.begin(9600);
   // Add Button(s) object to buttons.   
   buttons.addButton(new TimedHold());
   buttons.addButton(new CustomButton());
