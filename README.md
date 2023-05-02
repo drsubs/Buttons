@@ -67,7 +67,7 @@ This is the example setup, useing an Arduino UNO
 ##
 
 <picture>
-  <img src="https://github.com/drsubs/Buttons/blob/main/examples/Buttons/Buttons.png">
+  <img src="https://github.com/drsubs/Buttons/blob/main/examples/Buttons/Buttons.png?1">
 </picture>
 
 
