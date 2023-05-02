@@ -21,8 +21,8 @@ public:
   CustomButton() : Button(BTN1) {}
   void virtual action() {
     // Do your stuff.
-    mySerial.print(state);
-    mySerial.println(" custom button 2");
+    Serial.print(state);
+    Serial.println(" custom button 2");
   }
 };
 
@@ -30,6 +30,7 @@ public:
 Buttons buttons;
 
 void setup() {
+Serial.begin(9600);
   // Add Button(s) object to buttons.   
   buttons.addButton(new CustomButton());
 }
