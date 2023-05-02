@@ -45,6 +45,14 @@ void loop() {
 ## How to install
 
 Download .zip file from this repository, choose sketch, in "include library" choose add .zip library, choose the .zip just downloaded.
+or
+Move to arduino/libraries
+open terminal in directory and write
+
+git clone https://github.com/drsubs/Buttons.git
+restart arduino ide
+
+done
 
 ## Learn
 Try the example. It is also a tutorial on class'es.
