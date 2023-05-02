@@ -59,6 +59,16 @@ done
 ## Learn
 Try the example. It is also a tutorial on class'es.
 
+## Example
+
+This is the example setup, useing an Arduino UNO
+
+
+##
+
+<picture>
+  <img src="https://github.com/drsubs/Buttons/blob/main/examples/Buttons/Buttons.png">
+</picture>
 
 
 
